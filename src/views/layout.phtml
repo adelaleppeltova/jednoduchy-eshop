@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $desc ?>" />
+    <meta name="keywords" content="<?= $key_words ?>" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/" alt="#" />
+                        </a>
+                    </div>
+                    <div class="header__nav">
+                        <nav class="navigation">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">
+                                        <span>Úvod</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="header-mobile-nav">
+                <div class="container--center">
+                    <div class="header-mobile-nav__content">
+                        <button aria-expanded="true" role="button" class="header-mobile-nav__close" id="close-mobile-nav-button">
+                            <img src="assets/images/menu_close.svg" alt="" />
+                        </button>
+                        <div class="header-mobile-nav__top">
+                            <div class="header-mobile__logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo.png" alt="ANDY & RONO" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-mobile-nav__links">
+                            <nav class="navigation">
+                                <ul class="navigation__list">
+                                    <li class="navigation__item">
+                                        <a class="navigation__link current" href="players.html">
+                                            <span>players</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="goalies.html">
+                                            <span>goalies</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="career.html"><span>career</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="games.html"><span>games</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item btn-border">
+                                        <a class="navigation__link" href="sign-in.html">
+                                            <span style="font-family: Teko; font-size: 2.5rem">SIGN IN / UP</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a href="#" class="twitter">
+                                <img src="assets/images/twitterlogo.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main class="content">
+
+        </main>
+
+
+        <?php $this->controller->printView(); ?>
+
+
+        <footer class="section-footer">
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
