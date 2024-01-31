@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  font-family: "Quicksand", sans-serif;
 
   @include media(1500px) {
     font-size: 58%;
@@ -110,18 +109,18 @@ ul {
     padding-left: 2.4rem;
     margin-bottom: 0.8rem;
 
-    &:before {
-      position: absolute;
-      content: "";
-      width: 6px;
-      height: 6px;
-      left: 0;
-      top: 8px;
-      background: $primary;
-      background-size: contain;
-      background-repeat: no-repeat;
-      @include transition(0.3s);
-    }
+    // &:before {
+    //   position: absolute;
+    //   content: "";
+    //   width: 6px;
+    //   height: 6px;
+    //   left: 0;
+    //   top: 8px;
+    //   background: $primary;
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   @include transition(0.3s);
+    // }
   }
 }
 

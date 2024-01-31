@@ -6,10 +6,14 @@
     <title><?= $title ?></title>
     <meta name="description" content="<?= $desc ?>" />
     <meta name="keywords" content="<?= $key_words ?>" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </head>
 
 <body>
@@ -19,12 +23,12 @@
             <div class="container">
                 <div class="header__content">
                     <div class="header__logo">
-                        <a href="index.html">
-                            <img src="assets/images/" alt="#" />
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="logo" />
                         </a>
                     </div>
                     <div class="header__nav">
-                        <nav class="navigation">
+                        <!-- <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__item">
                                     <a class="navigation__link" href="#">
@@ -32,64 +36,58 @@
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
-
+                        </nav> -->
                     </div>
+
                 </div>
-
-
-            </div>
-
-            <div class="header-mobile-nav">
-                <div class="container--center">
-                    <div class="header-mobile-nav__content">
-                        <button aria-expanded="true" role="button" class="header-mobile-nav__close" id="close-mobile-nav-button">
-                            <img src="assets/images/menu_close.svg" alt="" />
-                        </button>
-                        <div class="header-mobile-nav__top">
-                            <div class="header-mobile__logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo.png" alt="ANDY & RONO" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="header-mobile-nav__links">
-                            <nav class="navigation">
-                                <ul class="navigation__list">
-                                    <li class="navigation__item">
-                                        <a class="navigation__link current" href="players.html">
-                                            <span>players</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a class="navigation__link" href="goalies.html">
-                                            <span>goalies</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a class="navigation__link" href="career.html"><span>career</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a class="navigation__link" href="games.html"><span>games</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item btn-border">
-                                        <a class="navigation__link" href="sign-in.html">
-                                            <span style="font-family: Teko; font-size: 2.5rem">SIGN IN / UP</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <a href="#" class="twitter">
-                                <img src="assets/images/twitterlogo.png" />
-                            </a>
-                        </div>
-                    </div>
+                <div class="menu btn2" data-menu="2">
+                    <div class="icon"></div>
                 </div>
             </div>
+
 
         </header>
+        <div class="header-mobile-nav">
+            <div class="container--center">
+                <div class="header-mobile-nav__content">
+                    <div class="header-mobile-nav__top">
+                        <!-- <div class="header-mobile-nav__logo">
+                            <a href="/">
+                                <img src="assets/images/logo.png" alt="logo" />
+                            </a>
+                        </div> -->
+                        <!-- <div class="menu btn2" data-menu="2">
+                            <div class="icon"></div>
+                        </div> -->
+                    </div>
+                    <div class="header-mobile-nav__links">
+                        <nav class="navigation">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="sign-in.html">
+                                        <!-- <img src="assets/images/user.png"> -->
+                                        <span>Sign in/up</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">
+                                        <span>Domů</span>
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="goalies.html">
+                                        <span>Kategorie</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="twitter">
+                            <!-- <img src="assets/images/twitterlogo.png" /> -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <main class="content">
 
         </main>
@@ -99,6 +97,50 @@
 
 
         <footer class="section-footer">
+            <div class="section-footer-bg"></div>
+            <div class="container">
+                <div class="footer">
+                    <div class="section-footer__content section-footer__content-l">
+
+                        <div class="section-footer__nav">
+                            <nav class="navigation">
+                                <ul class="navigation__list">
+                                    <li class="navigation__item">
+                                        <a class="navigation__link'" href="/">
+                                            <span>Kategorie</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link'" href="#">
+                                            <span>Obchodní podmínky</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="section-footer__title">
+                            <span>Kontakt</span>
+                        </div>
+                        <div class="section-footer__link">
+                            <a href="mailto:example@example.cz">example@example.cz</a>
+                        </div>
+
+                        <div class="section-footer__text">
+                            © 2024 by Adéla Leppeltová
+                        </div>
+                    </div>
+                    <div class="section-footer__content section-footer__content-r">
+                        <!-- <div class="section-footer__social">
+                            <a href="#" class="social-image">
+                                <img src="assets/images/paypal.png" />
+                            </a>
+                            <a href="#" class="social-image">
+                                <img src="assets/images/stripe.png" />
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
 
         </footer>
     </div>
