@@ -59,10 +59,39 @@
       &:after {
         @include icon-after(5px, 30px, 15px);
       }
+      @media only screen and (min-width: 1200px) {
+        display: none !important;
+      }
     }
     &:hover {
       cursor: pointer;
     }
+  }
+
+  .cart {
+    position: absolute;
+    width: 4rem;
+    top: 26px;
+    right: 20px;
+    @media only screen and (min-width: 1200px) {
+      top: 35px;
+      right: 60px;
+    }
+  }
+
+  .cart[data-count]:after {
+    content: attr(data-count);
+    border-radius: 50%;
+    background: #d60b28;
+    color: white;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    font-weight: bold;
+    z-index: 2;
+    padding: 4px 5px;
+    left: 27px;
+    top: -4px;
   }
 }
 
@@ -74,13 +103,13 @@
   height: 100vh;
   width: 0;
   overflow: hidden;
+  z-index: 1000;
 
   &.open {
     display: block;
 
-    z-index: 1000;
     width: 100%;
-    background-color: rgba(90, 103, 87, 0.7);
+    background-color: rgba(156, 168, 153, 0.97);
     transition: 0.5s;
   }
 
@@ -129,6 +158,10 @@
 }
 
 .navigation {
+  &__icon {
+    width: 5rem;
+  }
+
   & > ul {
     list-style: none;
     margin: 0;
@@ -141,6 +174,9 @@
       display: flex;
       column-gap: 3rem;
       padding: 0;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0 0 0;
     }
     @media only screen and (min-width: 1550px) {
       column-gap: 4rem;
@@ -172,6 +208,7 @@
         &:hover {
           ul {
             display: block;
+            // box-shadow: 0 -8px 7px 5px rgba(0, 0, 0, 0.5);
           }
         }
       }
@@ -184,14 +221,13 @@
 
         @media only screen and (min-width: 1200px) {
           display: none;
-          background: #fff;
-          padding: 1rem 0 1.2rem 0;
-        }
-        @media only screen and (min-width: 1200px) {
+          background-color: rgba(156, 168, 153, 0.97);
+          padding: 1rem 0 1rem 0;
           position: absolute;
           top: 100%;
           left: -3rem;
           min-width: calc(100% + 6rem);
+          text-align: center;
         }
 
         & > li {
@@ -205,7 +241,7 @@
             display: block;
             padding: 1.3rem 0;
             transition: $defaultTransitions;
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             font-weight: $fontRegular;
             font-family: $fontPrimary;
             color: $textColorPrimary;
@@ -238,6 +274,7 @@
         text-decoration: none;
         text-align: center;
         line-height: 1.8;
+        text-transform: uppercase;
 
         @media only screen and (min-width: 1200px) {
           font-size: 1.9rem;
