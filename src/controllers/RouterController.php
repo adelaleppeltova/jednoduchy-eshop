@@ -24,6 +24,12 @@ class RouterController extends Controller
 
         $this->controller->process($parsedURL);
 
+        $this->data['title'] = $this->controller->header['title'];
+        $this->data['desc'] = $this->controller->header['desc'];
+        $this->data['key_words'] = $this->controller->header['key_words'];
+        $this->data['messages'] = $this->getMessages();
+
+
         $this->view = 'layout';
     }
 }

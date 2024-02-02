@@ -1238,6 +1238,10 @@ figure.wp-block-image figcaption {
   color: #000000;
 }
 
+body {
+  min-height: 100%;
+}
+
 .footer {
   display: flex;
   width: 100%;
@@ -1282,4 +1286,11 @@ figure.wp-block-image figcaption {
 .section-footer__text {
   font-size: 1.4rem;
   margin: 1.5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 240px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
 }/*# sourceMappingURL=style.css.map */
