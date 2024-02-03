@@ -208,19 +208,19 @@
         &:hover {
           ul {
             display: block;
-            // box-shadow: 0 -8px 7px 5px rgba(0, 0, 0, 0.5);
           }
         }
       }
 
       & > ul {
-        display: block;
+        display: none;
         list-style: none;
         margin: 0;
         padding: 0 0 0 2.5rem;
+        background-color: transparent;
+        text-align: center;
 
         @media only screen and (min-width: 1200px) {
-          display: none;
           background-color: rgba(156, 168, 153, 0.97);
           padding: 1rem 0 1rem 0;
           position: absolute;
