@@ -110,6 +110,15 @@
 
 // product.phtml styles
 
+.product {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
 .button-cart {
   @include link-reseter;
 
@@ -130,7 +139,18 @@
   opacity: 0.6;
 }
 
+.product-image {
+  @media only screen and (min-width: 1200px) {
+    width: 60%;
+  }
+}
+
 .product-details {
+  @media only screen and (min-width: 1200px) {
+    margin: 0 0 0 3rem;
+    width: 40%;
+  }
+
   &__title {
     @include link-reseter;
 
@@ -165,12 +185,12 @@
       color: $hoverColorDark;
     }
   }
-  &__shortdesc {
+  &__shortdesc > p {
     font-size: 1.8rem;
     font-family: $fontPrimary;
   }
 
-  &__longdesc {
+  &__longdesc > p {
     font-size: 1.8rem;
     font-family: $fontPrimary;
   }

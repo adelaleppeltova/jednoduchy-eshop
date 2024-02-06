@@ -692,6 +692,16 @@ template {
   }
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  .product {
+    flex-direction: row;
+  }
+}
+
 .button-cart {
   cursor: pointer;
   position: relative;
@@ -719,6 +729,18 @@ template {
   opacity: 0.6;
 }
 
+@media only screen and (min-width: 1200px) {
+  .product-image {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .product-details {
+    margin: 0 0 0 3rem;
+    width: 40%;
+  }
+}
 .product-details__title {
   cursor: pointer;
   position: relative;
@@ -765,11 +787,11 @@ template {
 .product-details__price:hover {
   color: #384036;
 }
-.product-details__shortdesc {
+.product-details__shortdesc > p {
   font-size: 1.8rem;
   font-family: "Quicksand", sans-serif;
 }
-.product-details__longdesc {
+.product-details__longdesc > p {
   font-size: 1.8rem;
   font-family: "Quicksand", sans-serif;
 }
