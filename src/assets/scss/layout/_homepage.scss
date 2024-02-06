@@ -1,0 +1,177 @@
+.grid {
+  display: grid;
+  margin: 0 auto;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-item {
+  margin: 0 auto;
+  &__image {
+    overflow: hidden;
+  }
+
+  &__image > img:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+  }
+
+  &__title {
+    > a {
+      @include link-reseter;
+
+      text-decoration: none;
+      position: relative;
+      display: block;
+      padding: 1.5rem 0 0;
+      transition: $defaultTransitions;
+      font-size: 2.3rem;
+      font-weight: $fontRegular;
+      font-family: $fontPrimary;
+      color: $textColorPrimary;
+      white-space: nowrap;
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+  &__price {
+    > a {
+      @include link-reseter;
+
+      text-decoration: none;
+      position: relative;
+      display: block;
+      padding: 1rem 0;
+      transition: $defaultTransitions;
+      font-size: 2.3rem;
+      font-weight: $fontBold;
+      font-family: $fontPrimary;
+      color: $textColorPrimary;
+      white-space: nowrap;
+      &:hover {
+        color: $hoverColorDark;
+      }
+    }
+  }
+  .button-cart {
+    @include link-reseter;
+
+    border: none;
+    color: $textColorSecondary;
+    background-color: $secondaryDark;
+    padding: 1.7rem;
+    text-align: center;
+    font-size: 16px;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .button-cart:hover {
+    opacity: 0.6;
+  }
+}
+
+// category.phtml styles
+
+.category-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .select {
+    width: 100%;
+    appearance: auto;
+    outline: 0;
+    box-shadow: none;
+    border: 2px solid $secondaryDark;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: $fontRegular;
+    font-family: $fontPrimary;
+    color: $textColorPrimary;
+    padding: 1rem 0.5em;
+    margin: 1rem 0;
+    @media only screen and (min-width: 1200px) {
+      width: 40%;
+    }
+  }
+}
+
+// product.phtml styles
+
+.button-cart {
+  @include link-reseter;
+
+  border: none;
+  color: $textColorSecondary;
+  background-color: $secondaryDark;
+  padding: 1.7rem;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+.button-cart:hover {
+  opacity: 0.6;
+}
+
+.product-details {
+  &__title {
+    @include link-reseter;
+
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 1.5rem 0 0;
+    transition: $defaultTransitions;
+    font-size: 2.3rem;
+    font-weight: $fontRegular;
+    font-family: $fontPrimary;
+    color: $textColorPrimary;
+    white-space: nowrap;
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+  &__price {
+    @include link-reseter;
+
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 1rem 0;
+    transition: $defaultTransitions;
+    font-size: 2.3rem;
+    font-weight: $fontBold;
+    font-family: $fontPrimary;
+    color: $textColorPrimary;
+    white-space: nowrap;
+    &:hover {
+      color: $hoverColorDark;
+    }
+  }
+  &__shortdesc {
+    font-size: 1.8rem;
+    font-family: $fontPrimary;
+  }
+
+  &__longdesc {
+    font-size: 1.8rem;
+    font-family: $fontPrimary;
+  }
+}

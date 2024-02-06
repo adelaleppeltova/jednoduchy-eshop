@@ -1,0 +1,14 @@
+.base-section-text {
+  line-height: 1.5;
+  font-weight: $fontLight;
+  font-family: $fontPrimary;
+  color: $textColorPrimary;
+}
+
+body {
+  min-height: 100%;
+}
+
+// .content {
+//   min-height: 74vh;
+// }
