@@ -641,7 +641,7 @@ template {
   text-decoration: none;
   border: none;
   color: #ffffff;
-  background-color: #384036;
+  background-color: #3b4439;
   padding: 1.7rem;
   text-align: center;
   font-size: 16px;
@@ -675,7 +675,7 @@ template {
           appearance: auto;
   outline: 0;
   box-shadow: none;
-  border: 2px solid #384036;
+  border: 2px solid #3b4439;
   background: transparent;
   color: #fff;
   cursor: pointer;
@@ -713,7 +713,7 @@ template {
   text-decoration: none;
   border: none;
   color: #ffffff;
-  background-color: #384036;
+  background-color: #3b4439;
   padding: 1.7rem;
   text-align: center;
   font-size: 16px;
@@ -794,6 +794,101 @@ template {
 .product-details__longdesc > p {
   font-size: 1.8rem;
   font-family: "Quicksand", sans-serif;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  .cart {
+    flex-direction: row;
+  }
+}
+.cart__items {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  .cart__items {
+    margin: 0 10rem 0 0;
+    width: 60%;
+  }
+}
+.cart__item {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid black;
+}
+.cart__item--image {
+  width: 30%;
+}
+.cart__item--delete {
+  cursor: pointer;
+}
+.cart__item--delete:hover {
+  color: #ff0000;
+}
+.cart .summary {
+  background-color: rgba(156, 168, 153, 0.97);
+}
+@media only screen and (min-width: 1200px) {
+  .cart .summary {
+    width: 40%;
+    height: 100%;
+  }
+}
+.cart .summary__title {
+  padding: 0 2rem;
+}
+.cart .summary__count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.cart .summary__count--total {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+.cart .summary__count--price {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+.cart .summary .button-next {
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  background-color: #272727;
+  padding: 1.7rem;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+.cart .summary .button-next:hover {
+  opacity: 0.7;
 }
 
 .header {
@@ -1115,7 +1210,7 @@ template {
   color: #5a6757;
 }
 .navigation .btn-border {
-  background: #1e5080;
+  background: #43484b;
 }
 .navigation .btn-border:hover {
   background: #5a6757;
@@ -1178,6 +1273,7 @@ section,
 .section--search-page-header h1 {
   font-size: 4rem;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 .section--search-page-header h1 strong {
   color: #5a6757;
@@ -1216,7 +1312,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #384036;
+  color: #3b4439;
 }
 
 ul {
@@ -1274,9 +1370,10 @@ ol[style="list-style-type: upper-roman;"] li:before {
 
 h1 {
   font-size: 4.1rem;
-  color: #20303c;
+  color: #121618;
   line-height: 1.1;
   margin: 4rem 0;
+  font-family: "Quicksand", sans-serif;
 }
 @media screen and (max-width: 1000px) {
   h1 {
@@ -1292,7 +1389,8 @@ h1 {
 
 h2 {
   font-size: 3.8rem;
-  color: #20303c;
+  color: #121618;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.1;
   margin: 3.5rem 0;
 }
@@ -1315,7 +1413,8 @@ h2 {
 
 h3 {
   font-size: 2.4rem;
-  color: #20303c;
+  color: #121618;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.1;
   margin: 3rem 0;
 }
@@ -1333,7 +1432,8 @@ h3 {
 
 h4 {
   font-size: 2.2rem;
-  color: #20303c;
+  color: #121618;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.1;
   margin: 3rem 0;
 }
@@ -1361,7 +1461,7 @@ svg {
 
 #cookie-bar {
   color: white;
-  background: #20303c !important;
+  background: #121618 !important;
   box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2) !important;
   border: 1px solid #222;
 }
@@ -1374,17 +1474,17 @@ svg {
 }
 
 table {
-  border: 1px solid #20303c;
+  border: 1px solid #121618;
   width: 100%;
 }
 table tr {
   transition: 0.3s;
 }
 table tr:hover {
-  background: rgba(32, 48, 60, 0.2);
+  background: rgba(18, 22, 24, 0.2);
 }
 table tr:last-of-type, table tr:first-of-type {
-  background: #20303c;
+  background: #121618;
 }
 table tr:last-of-type td, table tr:first-of-type td {
   color: #ffffff;
@@ -1459,6 +1559,7 @@ figure.wp-block-image figcaption {
 }
 .section--404 h1 {
   font-size: 5rem;
+  font-family: "Quicksand", sans-serif;
 }
 
 .base-section-text, .section-footer__text {
