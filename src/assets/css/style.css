@@ -836,36 +836,38 @@ template {
 .cart__item--delete:hover {
   color: #ff0000;
 }
-.cart .summary {
+
+.summary {
   background-color: rgba(156, 168, 153, 0.97);
 }
 @media only screen and (min-width: 1200px) {
-  .cart .summary {
+  .summary {
     width: 40%;
     height: 100%;
   }
 }
-.cart .summary__title {
+.summary__title {
   padding: 0 2rem;
 }
-.cart .summary__count {
+.summary__count {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
 }
-.cart .summary__count--total {
+.summary__count--total {
   font-size: 2rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
 }
-.cart .summary__count--price {
+.summary__count--price {
   font-size: 2rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
 }
-.cart .summary .button-next {
+
+.button-next {
   cursor: pointer;
   position: relative;
   margin: 0;
@@ -887,8 +889,61 @@ template {
   cursor: pointer;
   width: 100%;
 }
-.cart .summary .button-next:hover {
+
+.button-next:hover {
   opacity: 0.7;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  .checkout {
+    flex-direction: row;
+  }
+}
+.checkout__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .checkout__items {
+    margin: 0 10rem 0 0;
+    width: 60%;
+  }
+}
+.checkout__item {
+  flex-direction: column;
+  display: flex;
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid black;
+}
+.checkout .form {
+  width: 100%;
+}
+.checkout .form fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+.checkout .form fieldset span {
+  margin: 0 0 1rem 0;
+}
+.checkout .form fieldset input {
+  margin: 1rem 0;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+.checkout .form fieldset input:focus {
+  border-color: rgba(156, 168, 153, 0.97);
 }
 
 .header {

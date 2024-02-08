@@ -239,54 +239,108 @@
       }
     }
   }
+}
+.summary {
+  background-color: rgba(156, 168, 153, 0.97);
+  @media only screen and (min-width: 1200px) {
+    width: 40%;
+    height: 100%;
+  }
+  &__title {
+    padding: 0 2rem;
+  }
 
-  .summary {
-    background-color: rgba(156, 168, 153, 0.97);
+  &__count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    &--total {
+      font-size: 2rem;
+      font-family: $fontPrimary;
+      font-weight: $fontRegular;
+    }
+    &--price {
+      font-size: 2rem;
+      font-family: $fontPrimary;
+      font-weight: $fontBold;
+    }
+  }
+}
+.button-next {
+  @include link-reseter;
+
+  border: none;
+  color: $textColorSecondary;
+  background-color: $greyDark;
+  padding: 1.7rem;
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+.button-next:hover {
+  opacity: 0.7;
+}
+
+// checkout.phtml styles
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     @media only screen and (min-width: 1200px) {
-      width: 40%;
-      height: 100%;
+      margin: 0 10rem 0 0;
+      width: 60%;
     }
-    &__title {
-      padding: 0 2rem;
-    }
+  }
+  &__item {
+    flex-direction: column;
+    display: flex;
+    font-size: 2rem;
+    font-family: $fontPrimary;
+    font-weight: $fontRegular;
+    margin: 0 0 2.5rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid black;
+  }
+  .form {
+    width: 100%;
 
-    &__count {
+    fieldset {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-
-      &--total {
-        font-size: 2rem;
-        font-family: $fontPrimary;
-        font-weight: $fontRegular;
-      }
-      &--price {
-        font-size: 2rem;
-        font-family: $fontPrimary;
-        font-weight: $fontBold;
-      }
-    }
-
-    .button-next {
-      @include link-reseter;
-
-      border: none;
-      color: $textColorSecondary;
-      background-color: $greyDark;
-      padding: 1.7rem;
-      text-align: center;
-      font-size: 16px;
-      opacity: 1;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
+      flex-direction: column;
       width: 100%;
-    }
-    .button-next:hover {
-      opacity: 0.7;
+      border: none;
+      padding: 0;
+
+      span {
+        margin: 0 0 1rem 0;
+      }
+
+      input {
+        margin: 1rem 0;
+        transition: $defaultTransitions;
+        border: 1px solid black;
+      }
+      input:focus {
+        border-color: rgba(156, 168, 153, 0.97);
+      }
     }
   }
 }

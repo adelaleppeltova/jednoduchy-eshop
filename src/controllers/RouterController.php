@@ -33,6 +33,10 @@ class RouterController extends Controller
             case "cart":
                 $this->controller = new CartController();
                 break;
+
+            case "checkout":
+                $this->controller = new CheckoutController();
+                break;
         }
 
 
