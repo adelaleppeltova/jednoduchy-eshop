@@ -37,6 +37,10 @@ class RouterController extends Controller
             case "checkout":
                 $this->controller = new CheckoutController();
                 break;
+
+            case "signin":
+                $this->controller = new SigninController();
+                break;
         }
 
 

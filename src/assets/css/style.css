@@ -946,6 +946,32 @@ template {
   border-color: rgba(156, 168, 153, 0.97);
 }
 
+.sign {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  padding: 2rem 0;
+}
+.sign fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+.sign fieldset input {
+  margin: 1rem 0;
+  transition: 0.3s;
+  border: 1px solid black;
+  padding: 0 5rem;
+}
+.sign fieldset input:focus {
+  border-color: rgba(156, 168, 153, 0.97);
+}
+
 .header {
   box-shadow: 0 -8px 7px 5px rgba(0, 0, 0, 0.5);
   padding: 1.5rem 0;
