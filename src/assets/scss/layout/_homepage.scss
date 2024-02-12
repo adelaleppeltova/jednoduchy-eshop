@@ -374,5 +374,81 @@
     input:focus {
       border-color: rgba(156, 168, 153, 0.97);
     }
+    .button-next {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+// client.phtml styles
+
+.client {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media only screen and (min-width: 1200px) {
+      margin: 0 10rem 0 0;
+      width: 60%;
+    }
+  }
+
+  &__item {
+    flex-direction: column;
+    display: flex;
+    font-size: 2rem;
+    font-family: $fontPrimary;
+    font-weight: $fontRegular;
+    margin: 0 0 2.5rem 0;
+    padding: 2rem 0;
+  }
+
+  .form {
+    width: 100%;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border: none;
+      padding: 0;
+
+      span {
+        margin: 0 0 1rem 0;
+      }
+
+      input {
+        margin: 1rem 0;
+        transition: $defaultTransitions;
+        border: 1px solid black;
+      }
+      input:focus {
+        border-color: rgba(156, 168, 153, 0.97);
+      }
+    }
+  }
+  .orders {
+    border: 1px solid black;
+    .order {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2rem;
+      font-family: $fontPrimary;
+      font-weight: $fontRegular;
+      padding: 2rem 1rem;
+      transition: 0.2s;
+      &:hover {
+        background-color: $hoverColorLight;
+      }
+    }
   }
 }
