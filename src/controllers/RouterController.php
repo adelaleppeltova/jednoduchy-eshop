@@ -20,34 +20,11 @@ class RouterController extends Controller
     {
         $parsedURL = $this->parseURL($parameters[0]);
 
-        $this->controller = new HomepageController();
+        $this->controller = new MainController();
 
         switch ($parsedURL[0]) {
-            case "kategorie":
-                $this->controller = new CategoryController();
-                break;
-            case "produkt":
-                $this->controller = new ProductController();
-                break;
-
-            case "cart":
-                $this->controller = new CartController();
-                break;
-
-            case "checkout":
-                $this->controller = new CheckoutController();
-                break;
-
-            case "signin":
-                $this->controller = new SigninController();
-                break;
-
-            case "signup":
-                $this->controller = new SignupController();
-                break;
-
-            case "client":
-                $this->controller = new ClientController();
+            case "ucet":
+                $this->controller = new AccountController();
                 break;
         }
 

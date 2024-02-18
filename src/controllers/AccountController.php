@@ -1,12 +1,12 @@
 <?php
 
-class ClientController extends Controller
+class AccountController extends Controller
 {
     function process(array $parameters): void
     {
         $this->header = array(
-            'title' => 'Vaše údaje',
-            'key_words' => 'client',
+            'title' => 'Můj účet',
+            'key_words' => 'account',
             'desc' => 'Vaše osobní údaje'
         );
 
