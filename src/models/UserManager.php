@@ -10,21 +10,23 @@ class UserManager
     }
 
 
-    public function register(string $name, string $password, string $passwordRepeat, string $email, string $street, string $town, string $pcode): void
+    public function register(string $fname, string $lname, string $password, string $email, string $street, string $town, string $pcode): void
     {
-        if ($password != $passwordRepeat)
-            throw new Exception('Hesla nesouhlasí.');
+
         $user = array(
-            'name' => $name,
+            'fname' => $fname,
+            'lname' => $lname,
             'password' => $this->hashPassword($password),
             'email' => $email,
             'street' => $street,
             'town' => $town,
             'pcode' => $pcode,
+            'admin' => false,
+
         );
         try {
             Db::insert('users', $user);
-        } catch (PDOException $error) {
+        } catch (PDOException $exeption) {
             throw new Exception('Uživatel s tímto jménem je již zaregistrovaný.');
         }
     }

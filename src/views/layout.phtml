@@ -47,18 +47,26 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="navigation__item">
-                                    <a class="navigation__link" href="ucet">
-                                        <!-- <img class="navigation__icon" src="assets/images/user.png"> -->
-                                        <span>Můj účet</span>
-                                    </a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a class="navigation__link" href="odhlasit">
-                                        <!-- <img class="navigation__icon" src="assets/images/user.png"> -->
-                                        <span>Odhlásit se</span>
-                                    </a>
-                                </li>
+                                <?php if ($loggedin) { ?>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="ucet">
+                                            <span>Můj účet</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="odhlasit">
+                                            <span>Odhlásit se</span>
+                                        </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link" href="prihlasit">
+                                            <span>Přihlásit se</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+
                             </ul>
                         </nav>
                     </div>
@@ -119,6 +127,10 @@
                 </div>
             </div>
         </div>
+
+        <?php foreach ($messages as $message) : ?>
+            <p class="message"><?= $message ?></p>
+        <?php endforeach ?>
         <main class="content">
             <?php $this->controller->printView(); ?>
         </main>

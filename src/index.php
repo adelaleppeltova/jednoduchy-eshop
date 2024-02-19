@@ -14,7 +14,7 @@ function autoloadFunction(string $class): void
 
 spl_autoload_register("autoloadFunction");
 
-// Db::connect("127.0.0.1", "root", "", "mvc_db");
+Db::connect("db.dw161.webglobe.com", "adela_janmatous", "u6OPU3wb", "janmatous_cz5");
 
 
 $router = new RouterController();

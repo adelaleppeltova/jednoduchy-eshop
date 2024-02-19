@@ -4,9 +4,7 @@ abstract class Controller
 {
 
     protected array $data = array();
-
     protected string $view = "";
-
     protected array $header = array('title' => '', 'key_word' => '', 'desc' => '');
 
 
@@ -62,12 +60,12 @@ abstract class Controller
 
     public function verifyUser(bool $admin = false): void
     {
-        // $userManager = new UserManager();
-        // $user = $userManager->getUser();
-        // if (!$user || ($admin && !$user['admin'])) {
-        //     $this->addMessage('Nedostatečná oprávnění.');
-        //     $this->redirect('prihlaseni');
-        // }
+        $userManager = new UserManager();
+        $user = $userManager->getUser();
+        if (!$user || ($admin && !$user['admin'])) {
+            $this->addMessage('Nedostatečná oprávnění.');
+            $this->redirect('login');
+        }
     }
 
     abstract function process(array $parameters): void;

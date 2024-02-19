@@ -26,6 +26,12 @@ class RouterController extends Controller
             case "ucet":
                 $this->controller = new AccountController();
                 break;
+            case "prihlasit":
+                $this->controller = new LoginController();
+                break;
+            case "registrace":
+                $this->controller = new RegisterController();
+                break;
         }
 
 
@@ -36,6 +42,7 @@ class RouterController extends Controller
         $this->data['desc'] = $this->controller->header['desc'];
         $this->data['key_words'] = $this->controller->header['key_words'];
         $this->data['messages'] = $this->getMessages();
+        $this->data['loggedin'] = false;
 
 
         $this->view = 'layout';
