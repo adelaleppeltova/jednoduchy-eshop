@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><?= $title ?></title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="description" content="<?= $desc ?>" />
+    <meta name="keywords" content="<?= $key_words ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="page">
+
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="logo" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <section class="section-intro">
+            <div class="container">
+                <h2>Administrace</h2>
+                <div class="admin">
+                    <div class="admin__items">
+                        <ul>
+                            <li>
+                                <a>Správa zákazníků</a>
+                            </li>
+                            <li>
+                                <a>Správa kategorií</a>
+                            </li>
+                            <li>
+                                <a>Správa produktů</a>
+                            </li>
+                            <li>
+                                <a>Správa doprav</a>
+                            </li>
+                            <li>
+                                <a>Správa plateb</a>
+                            </li>
+                            <li>
+                                <a>Přehled objednávek</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+
+                        <?php $this->controller->printView(); ?>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <footer class="section-footer">
+            <div class="section-footer-bg"></div>
+            <div class="container">
+                <div class="footer">
+                    <div class="section-footer__content">
+                        <div class="section-footer__text">
+                            © 2024 by Adéla Leppeltová
+                        </div>
+                    </div>
+                    <div class="section-footer__content section-footer__content-r">
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+</body>
+</div>
+
+</html>

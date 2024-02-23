@@ -369,7 +369,6 @@
       margin: 1rem 0;
       transition: $defaultTransitions;
       border: 1px solid black;
-      padding: 0 5rem;
     }
     input:focus {
       border-color: rgba(156, 168, 153, 0.97);
@@ -451,4 +450,14 @@
       }
     }
   }
+}
+
+.message {
+  text-align: center;
+  background-color: $secondary;
+  color: $textColorSecondary;
+  margin: 0;
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }

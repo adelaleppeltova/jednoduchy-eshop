@@ -219,6 +219,7 @@
         padding: 0 0 0 2.5rem;
         background-color: transparent;
         text-align: center;
+        z-index: 1;
 
         @media only screen and (min-width: 1200px) {
           background-color: rgba(156, 168, 153, 0.97);

@@ -24,7 +24,7 @@ class CategoryManager
     public function getCategories(): array
     {
         return Db::requestAll('
-			SELECT `id`, `title`, `descript`
+			SELECT `id`, `url`, `title`, `descript`
 			FROM `categories` 
 			ORDER BY `id` DESC
 		');

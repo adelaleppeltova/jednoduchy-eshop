@@ -567,6 +567,53 @@ template {
   display: none;
 }
 
+.admin {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  .admin {
+    flex-direction: row;
+  }
+}
+.admin__items {
+  background-color: rgba(156, 168, 153, 0.97);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1200px) {
+  .admin__items {
+    width: 30%;
+  }
+}
+.admin__items > ul > li {
+  padding: 1.3rem 0;
+}
+.admin__items > ul > li > a {
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+@media only screen and (min-width: 1200px) {
+  .admin__items > ul > li > a {
+    font-size: 1.8rem;
+  }
+}
+.admin .content {
+  width: 100%;
+}
+
 .grid {
   display: grid;
   margin: 0 auto;
@@ -966,7 +1013,6 @@ template {
   margin: 1rem 0;
   transition: 0.3s;
   border: 1px solid black;
-  padding: 0 5rem;
 }
 .sign fieldset input:focus {
   border-color: rgba(156, 168, 153, 0.97);
@@ -1041,6 +1087,16 @@ template {
 }
 .client .orders .order:hover {
   background-color: #bdc7bb;
+}
+
+.message {
+  text-align: center;
+  background-color: #5a6757;
+  color: #ffffff;
+  margin: 0;
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
 
 .header {
@@ -1288,6 +1344,7 @@ template {
   padding: 0 0 0 2.5rem;
   background-color: transparent;
   text-align: center;
+  z-index: 1;
 }
 @media only screen and (min-width: 1200px) {
   .navigation > ul > li > ul {

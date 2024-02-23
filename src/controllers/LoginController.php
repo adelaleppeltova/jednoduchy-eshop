@@ -5,8 +5,11 @@ class LoginController extends Controller
     public function process(array $parameters): void
     {
         $userManager = new UserManager();
+        if ($parameters[0] = "odhlasit") {
+            $userManager->logout();
+        }
         if ($userManager->getUser())
-            $this->redirect('klient');
+            $this->redirect('ucet');
 
 
         $this->header['title'] = 'Přihlášení';
