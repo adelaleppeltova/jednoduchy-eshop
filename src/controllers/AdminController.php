@@ -7,17 +7,18 @@ class AdminController extends Controller
     protected array $products;
     protected array $transports;
     protected array $payments;
+    protected array $users;
 
 
 
-    public function __construct(array $categories, array $products, array $transports, array $payments)
+    public function __construct(array $categories, array $products, array $transports, array $payments, array $users)
     {
         $this->categories = $categories;
         $this->products = $products;
         $this->transports = $transports;
         $this->payments = $payments;
+        $this->users = $users;
     }
-
 
 
     function process(array $parameters): void
@@ -49,6 +50,9 @@ class AdminController extends Controller
                 case 'payments':
                     $this->view = 'admin/payments';
                     break;
+                case 'clients':
+                    $this->view = 'admin/clients';
+                    break;
             }
         }
 
@@ -57,6 +61,7 @@ class AdminController extends Controller
         $this->data['products'] = $this->products;
         $this->data['transports'] = $this->transports;
         $this->data['payments'] = $this->payments;
+        $this->data['users'] = $this->users;
 
 
         $this->data['selectedCategory'] = CategoryManager::getCategory(1);

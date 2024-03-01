@@ -2,10 +2,10 @@
 class ProductManager
 {
 
-    public function getProduct(string $id): array
+    public static function getProduct(string $id): array
     {
         return Db::requestSingle('
-			SELECT `id`, `title`, `price`, `shortdesc`, `longdesc`, `image`
+			SELECT `id`, `title`, `price`, `shortdesc`, `longdesc`, `image`,  `categories_id`
 			FROM `products` 
 			WHERE `id` = ?
 		', array($id));

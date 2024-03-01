@@ -2,6 +2,12 @@
 
 class MainController extends Controller
 {
+
+    protected array $products;
+    public function __construct(array $products)
+    {
+        $this->products = $products;
+    }
     function process(array $parameters): void
     {
         switch ($parameters[0]) {
@@ -27,5 +33,7 @@ class MainController extends Controller
                 $this->view = 'homepage';
                 break;
         }
+
+        $this->data['products'] = $this->products;
     }
 }

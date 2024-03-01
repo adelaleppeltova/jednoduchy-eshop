@@ -20,15 +20,16 @@ class RouterController extends Controller
     {
         $parsedURL = $this->parseURL($parameters[0]);
 
-        $this->controller = new MainController();
-        $this->view = 'layout';
 
         $userManager = new UserManager();
         $categories = CategoryManager::getCategories();
         $products = ProductManager::getProducts();
         $transports = TransportManager::getTransports();
         $payments = PaymentManager::getPayments();
+        $users = UserManager::getUsers();
 
+        $this->controller = new MainController($products);
+        $this->view = 'layout';
 
         switch ($parsedURL[0]) {
             case "ucet":
@@ -42,7 +43,7 @@ class RouterController extends Controller
                 $this->controller = new RegisterController();
                 break;
             case "admin":
-                $this->controller = new AdminController($categories, $products, $transports, $payments);
+                $this->controller = new AdminController($categories, $products, $transports, $payments, $users);
                 $this->view = 'admin';
                 break;
 
@@ -64,6 +65,7 @@ class RouterController extends Controller
         $this->data['products'] = $products;
         $this->data['payments'] = $payments;
         $this->data['transports'] = $transports;
+        $this->data['users'] = $users;
 
         $this->data['basePath'] = $_SERVER['SERVER_NAME'];
     }

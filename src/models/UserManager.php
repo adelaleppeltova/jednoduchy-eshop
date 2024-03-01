@@ -58,6 +58,15 @@ class UserManager
         return null;
     }
 
+    public static function getUsers(): array
+    {
+        return Db::requestAll('
+        SELECT `id`,`fname`, `lname`, `email`, `street`, `town`, `pcode`
+        FROM `users` 
+        ORDER BY `id` DESC
+    ');
+    }
+
     public function getUserData()
     {
         $id = $this->getUser()["id"];

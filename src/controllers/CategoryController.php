@@ -21,7 +21,6 @@ class CategoryController extends Controller
 
 
 
-
         $this->data['categories'] = $this->categories;
         $this->data['selectedCategory'] = CategoryManager::getCategory(1);
 

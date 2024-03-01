@@ -1,0 +1,29 @@
+<div class="tg-wrap">
+    <table class="tg">
+        <thead>
+            <tr>
+                <th class="tg-0pky">Jméno</th>
+                <th class="tg-0pky">Příjmení</th>
+                <th class="tg-0pky">E-mail</th>
+                <th class="tg-0pky">Ulice</th>
+                <th class="tg-0pky">Město</th>
+                <th class="tg-0pky">PSČ</th>
+                <th class="tg-0pky">Upravit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td class="tg-pcvp"><?= $user["fname"] ?></td>
+                    <td class="tg-pcvp"><?= $user["lname"] ?></td>
+                    <td class="tg-pcvp"><?= $user["email"] ?></td>
+                    <td class="tg-pcvp"><?= $user["street"] ?></td>
+                    <td class="tg-pcvp"><?= $user["town"] ?></td>
+                    <td class="tg-pcvp"><?= $user["pcode"] ?></td>
+                    <td class="tg-pcvp"><a href="/admin/clients/edit?id=<?= $product["id"] ?>"><i class="fa-solid fa-pencil edit-pencil"></i></a></td>
+                </tr>
+            <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>
