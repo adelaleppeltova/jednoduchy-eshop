@@ -276,17 +276,12 @@ table {
     @include transition;
 
     &:hover {
-      background: rgba($primary, 0.2);
+      background: rgba($hoverColor, 0.2);
     }
 
-    &:last-of-type,
-    &:first-of-type {
-      background: $primary;
-
-      td {
-        color: #ffffff;
-        font-weight: $fontBold;
-      }
+    td {
+      color: #ffffff;
+      font-weight: $fontBold;
     }
 
     td {

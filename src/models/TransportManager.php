@@ -21,7 +21,7 @@ class TransportManager
     }
 
 
-    public function getTransports(): array
+    public static function getTransports(): array
     {
         return Db::requestAll('
 			SELECT `id`, `title`, `price`

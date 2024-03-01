@@ -21,10 +21,10 @@ class ProductManager
     }
 
 
-    public function getProducts(): array
+    public static function getProducts(): array
     {
         return Db::requestAll('
-			SELECT `id`, `title`, `price`
+			SELECT `id`, `title`, `price`, `shortdesc`, `longdesc`, `image`, `categories_id`
 			FROM `products` 
 			ORDER BY `id` DESC
 		');

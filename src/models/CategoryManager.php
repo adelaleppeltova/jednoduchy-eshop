@@ -2,10 +2,10 @@
 class CategoryManager
 {
 
-    public function getCategory(string $id): array
+    public static function getCategory(string $id): array
     {
         return Db::requestSingle('
-			SELECT `id`, `title`, `descript`
+			SELECT `id`, `url`, `title`, `descript`, `homepage`
 			FROM `categories` 
 			WHERE `id` = ?
 		', array($id));
@@ -21,10 +21,10 @@ class CategoryManager
     }
 
 
-    public function getCategories(): array
+    public static function getCategories(): array
     {
         return Db::requestAll('
-			SELECT `id`, `url`, `title`, `descript`
+			SELECT `id`, `url`, `title`, `descript`, `homepage`
 			FROM `categories` 
 			ORDER BY `id` DESC
 		');

@@ -35,3 +35,70 @@
     width: 100%;
   }
 }
+
+// table styles
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 2rem 0;
+
+  @media screen and (min-width: 767px) {
+    margin: 0 2rem;
+  }
+}
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: $fontPrimary;
+  color: $textColorPrimary;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: $fontPrimary;
+  color: $textColorPrimary;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+}
+.tg .tg-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+.tg .tg-pcvp {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 767px) {
+  .tg col {
+    width: auto !important;
+  }
+  .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.edit-pencil {
+  color: black;
+  transition: 0.2s;
+}
+
+.edit-pencil:hover {
+  color: red;
+}

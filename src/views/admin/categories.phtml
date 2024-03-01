@@ -1,1 +1,25 @@
-<p>MAIN</p>
+<div class="tg-wrap">
+    <table class="tg">
+        <thead>
+            <tr>
+                <th class="tg-0pky">url</th>
+                <th class="tg-0pky">Název</th>
+                <th class="tg-0pky">Popis</th>
+                <th class="tg-0pky">Homepage</th>
+                <th class="tg-0pky">Upravit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($categories as $category) : ?>
+                <tr>
+                    <td class="tg-pcvp"><?= $category["url"] ?></td>
+                    <td class="tg-pcvp"><?= $category["title"] ?></td>
+                    <td class="tg-pcvp"><?= $category["descript"] ?></td>
+                    <td class="tg-pcvp"><?= $category["homepage"] ?></td>
+                    <td class="tg-pcvp"><a href="/admin/categories/edit?id=<?= $category["id"] ?>"><i class="fa-solid fa-pencil edit-pencil"></i></a></td>
+                </tr>
+            <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>

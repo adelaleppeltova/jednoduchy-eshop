@@ -15,20 +15,6 @@ class MainController extends Controller
                 $this->view = 'cart';
                 break;
 
-            case "kategorie":
-                $this->header = array(
-                    'title' => 'Kategorie',
-                    'key_words' => 'category',
-                    'desc' => 'Kategorie'
-                );
-
-                $this->view = 'category';
-
-                break;
-
-
-
-
 
 
             default:
