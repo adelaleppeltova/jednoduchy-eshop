@@ -27,6 +27,7 @@ class RouterController extends Controller
         $categories = CategoryManager::getCategories();
         $products = ProductManager::getProducts();
         $transports = TransportManager::getTransports();
+        $payments = PaymentManager::getPayments();
 
 
         switch ($parsedURL[0]) {
@@ -41,7 +42,7 @@ class RouterController extends Controller
                 $this->controller = new RegisterController();
                 break;
             case "admin":
-                $this->controller = new AdminController($categories, $products, $transports);
+                $this->controller = new AdminController($categories, $products, $transports, $payments);
                 $this->view = 'admin';
                 break;
 
@@ -61,6 +62,9 @@ class RouterController extends Controller
         $this->data['loggedin'] = $userManager->getUser();
         $this->data['categories'] = $categories;
         $this->data['products'] = $products;
+        $this->data['payments'] = $payments;
+        $this->data['transports'] = $transports;
+
         $this->data['basePath'] = $_SERVER['SERVER_NAME'];
     }
 }

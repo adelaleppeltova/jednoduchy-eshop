@@ -6,13 +6,16 @@ class AdminController extends Controller
     protected array $categories;
     protected array $products;
     protected array $transports;
+    protected array $payments;
 
 
-    public function __construct(array $categories, array $products, array $transports)
+
+    public function __construct(array $categories, array $products, array $transports, array $payments)
     {
         $this->categories = $categories;
         $this->products = $products;
         $this->transports = $transports;
+        $this->payments = $payments;
     }
 
 
@@ -42,6 +45,10 @@ class AdminController extends Controller
                 case 'transports':
                     $this->view = 'admin/transports';
                     break;
+
+                case 'payments':
+                    $this->view = 'admin/payments';
+                    break;
             }
         }
 
@@ -49,6 +56,7 @@ class AdminController extends Controller
         $this->data['categories'] = $this->categories;
         $this->data['products'] = $this->products;
         $this->data['transports'] = $this->transports;
+        $this->data['payments'] = $this->payments;
 
 
         $this->data['selectedCategory'] = CategoryManager::getCategory(1);

@@ -21,7 +21,7 @@ class PaymentManager
     }
 
 
-    public function getPayments(): array
+    public static function getPayments(): array
     {
         return Db::requestAll('
 			SELECT `id`, `title`, `price`
