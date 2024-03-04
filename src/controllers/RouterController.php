@@ -43,7 +43,7 @@ class RouterController extends Controller
                 $this->controller = new RegisterController();
                 break;
             case "admin":
-                $this->controller = new AdminController($categories, $products, $transports, $payments, $users);
+                $this->controller = new AdminController();
                 $this->view = 'admin';
                 break;
 

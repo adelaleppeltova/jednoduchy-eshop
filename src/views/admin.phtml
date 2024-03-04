@@ -33,6 +33,9 @@
                 </div>
             </div>
         </header>
+        <?php foreach ($messages as $message) : ?>
+            <p class="message"><?= $message ?></p>
+        <?php endforeach ?>
 
         <section class="section-intro">
             <div class="container">
@@ -60,6 +63,7 @@
                             </li>
                         </ul>
                     </div>
+
                     <div class="content">
 
                         <?php $this->controller->printView(); ?>

@@ -1,3 +1,7 @@
+<div class="content-top">
+    <h3>Správa kategorií</h3>
+    <a href="/admin/categories/edit"><button type="button" class="button-next">Nová kategorie</button></a>
+</div>
 <div class="tg-wrap">
     <table class="tg">
         <thead>
@@ -7,6 +11,8 @@
                 <th class="tg-0pky">Popis</th>
                 <th class="tg-0pky">Homepage</th>
                 <th class="tg-0pky">Upravit</th>
+                <th class="tg-0pky">Odstranit</th>
+
             </tr>
         </thead>
         <tbody>
@@ -17,6 +23,7 @@
                     <td class="tg-pcvp"><?= $category["descript"] ?></td>
                     <td class="tg-pcvp"><?= $category["homepage"] ?></td>
                     <td class="tg-pcvp"><a href="/admin/categories/edit?id=<?= $category["id"] ?>"><i class="fa-solid fa-pencil edit-pencil"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-trash delete-icon"></a></i></td>
                 </tr>
             <?php endforeach ?>
 

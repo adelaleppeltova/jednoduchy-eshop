@@ -12,7 +12,7 @@ class CategoryManager
     }
 
 
-    public function saveCategory(int|bool $id, array $category): void
+    public static function saveCategory(int|bool $id, array $category): void
     {
         if (!$id)
             Db::insert('categories', $category);
@@ -30,7 +30,7 @@ class CategoryManager
 		');
     }
 
-    public function deleteCategories(string $id): void
+    public static function deleteCategories(string $id): void
     {
         Db::request('
 			DELETE FROM categories
