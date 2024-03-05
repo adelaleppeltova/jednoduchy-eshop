@@ -1,0 +1,10 @@
+<form class="form" action="/admin/payments/edit?id=<?= $_GET["id"] ?>" method="post">
+    <fieldset>
+        <label for="title">Název:</label>
+        <input type="text" id="title" name="title" value="<?= $payment["title"] ?>">
+        <label for="price">Cena:</label>
+        <input type="text" id="price" name="price" value="<?= $payment["price"] ?>">
+
+        <button type="submit" class="button-next">Uložit</button>
+    </fieldset>
+</form>

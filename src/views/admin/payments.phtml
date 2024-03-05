@@ -1,3 +1,7 @@
+<div class="content-top">
+    <h3>Správa plateb</h3>
+    <a href="/admin/payments/edit"><button type="button" class="button-next">Nový typ platby</button></a>
+</div>
 <div class="tg-wrap">
     <table class="tg">
         <thead>
@@ -5,6 +9,8 @@
                 <th class="tg-0pky">Název</th>
                 <th class="tg-0pky">Cena</th>
                 <th class="tg-0pky">Upravit</th>
+                <th class="tg-0pky">Odstranit</th>
+
 
             </tr>
         </thead>
@@ -14,6 +20,8 @@
                     <td class="tg-pcvp"><?= $payment["title"] ?></td>
                     <td class="tg-pcvp"><?= $payment["price"] ?></td>
                     <td class="tg-pcvp"><a href="/admin/payments/edit?id=<?= $payment["id"] ?>"><i class="fa-solid fa-pencil edit-pencil"></i></a></td>
+                    <td class="tg-pcvp"><a href="#"><i class="fa-solid fa-trash delete-icon"></a></i></td>
+
                 </tr>
             <?php endforeach ?>
 

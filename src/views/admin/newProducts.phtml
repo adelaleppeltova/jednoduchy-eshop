@@ -1,0 +1,22 @@
+<form class="form" action="/admin/products/edit" method="post">
+    <fieldset>
+        <label for="title">Název:</label>
+        <input type="text" id="title" name="title">
+        <label for="price">Cena:</label>
+        <input type="text" id="price" name="price">
+        <label for="shortdesc">Krátký popis:</label>
+        <textarea type="text" id="shortdesc" name="shortdesc" rows="4"></textarea>
+        <label for="longdesc">Dlouhý popis:</label>
+        <textarea type="text" id="longdesc" name="longdesc" rows="8"></textarea>
+        <label for="image">Obrázek:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <label for="image">Kategorie:</label>
+        <select id="categories_id" name="categories_id">
+            <?php foreach ($categories as $category) : ?>
+                <option><?= $category['id'] ?></option>
+            <?php endforeach ?>
+        </select>
+
+        <button type="submit" class="button-next">Uložit</button>
+    </fieldset>
+</form>

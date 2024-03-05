@@ -2,7 +2,7 @@
 class TransportManager
 {
 
-    public function getTransport(string $id): array
+    public static function getTransport(string $id): array
     {
         return Db::requestSingle('
 			SELECT `id`, `title`, `price`
@@ -12,7 +12,7 @@ class TransportManager
     }
 
 
-    public function saveTransport(int|bool $id, array $transport): void
+    public static function saveTransport(int|bool $id, array $transport): void
     {
         if (!$id)
             Db::insert('transport', $transport);
@@ -30,7 +30,7 @@ class TransportManager
 		');
     }
 
-    public function deleteTransport(string $id): void
+    public static function deleteTransport(string $id): void
     {
         Db::request('
 			DELETE FROM transport

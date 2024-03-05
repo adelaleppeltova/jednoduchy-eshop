@@ -2,7 +2,7 @@
 class PaymentManager
 {
 
-    public function getPayment(string $id): array
+    public static function getPayment(string $id): array
     {
         return Db::requestSingle('
 			SELECT `id`, `title`, `price`
@@ -12,7 +12,7 @@ class PaymentManager
     }
 
 
-    public function savePayment(int|bool $id, array $payment): void
+    public static function savePayment(int|bool $id, array $payment): void
     {
         if (!$id)
             Db::insert('payment', $payment);
@@ -30,7 +30,7 @@ class PaymentManager
 		');
     }
 
-    public function deletePayment(string $id): void
+    public static function deletePayment(string $id): void
     {
         Db::request('
 			DELETE FROM payment

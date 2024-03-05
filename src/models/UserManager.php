@@ -51,7 +51,7 @@ class UserManager
     }
 
 
-    public function getUser(): array|null
+    public static function getUser(): array|null
     {
         if (isset($_SESSION['user']))
             return $_SESSION['user'];
@@ -98,5 +98,13 @@ class UserManager
 
 
         Db::update('users', $user, 'WHERE id = ?', array($id));
+    }
+
+    public static function saveUser(int|bool $id, array $user): void
+    {
+        if (!$id)
+            Db::insert('users', $user);
+        else
+            Db::update('users', $user, 'WHERE id = ?', array($id));
     }
 }

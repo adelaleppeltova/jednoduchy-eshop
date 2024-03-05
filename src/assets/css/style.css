@@ -639,6 +639,7 @@ template {
 }
 
 .tg {
+  min-width: 60%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -718,7 +719,9 @@ template {
   color: red;
 }
 
-input {
+input,
+textarea,
+select {
   margin: 1rem 0;
 }
 
@@ -726,6 +729,9 @@ fieldset {
   display: flex;
   font-size: 1.4em;
   flex-direction: column;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #000000;
 }
 
 .form {

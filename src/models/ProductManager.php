@@ -12,7 +12,7 @@ class ProductManager
     }
 
 
-    public function saveProduct(int|bool $id, array $product): void
+    public static function saveProduct(int|bool $id, array $product): void
     {
         if (!$id)
             Db::insert('products', $product);
@@ -30,7 +30,7 @@ class ProductManager
 		');
     }
 
-    public function deleteProduct(string $id): void
+    public static function deleteProduct(string $id): void
     {
         Db::request('
 			DELETE FROM products
