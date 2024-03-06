@@ -207,6 +207,12 @@ class AdminController extends Controller
                     $this->data['users'] = UserManager::getUsers();
 
                     break;
+                case 'general':
+
+                    $this->view = 'admin/general';
+                    $this->data['categories'] = CategoryManager::getCategories();
+
+                    break;
             }
         }
 

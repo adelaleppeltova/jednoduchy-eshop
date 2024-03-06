@@ -1,0 +1,14 @@
+<div class="content-general">
+    <h3>Volba kategorie na homepage</h3>
+    <form class="form" action="/admin/general/edit?id=" method="post">
+        <fieldset>
+            <select>
+                <?php foreach ($categories as $category) : ?>
+                    <option><?= $category['title'] ?></option>
+                <?php endforeach ?>
+            </select>
+
+            <button type="submit" class="button-next">Uložit</button>
+        </fieldset>
+    </form>
+</div>

@@ -745,6 +745,28 @@ fieldset {
   margin: 1rem 0;
 }
 
+.content-general {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 2rem 0;
+}
+@media screen and (min-width: 1200px) {
+  .content-general {
+    margin: 0 0 2rem 2rem;
+  }
+}
+.content-general > h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+.content-general > button {
+  width: 30%;
+}
+.content-general fieldset {
+  padding: 0;
+  font-size: 1.9rem;
+}
+
 .grid {
   display: grid;
   margin: 0 auto;
@@ -1190,6 +1212,7 @@ fieldset {
   width: 100%;
   border: none;
   padding: 0;
+  font-size: 2rem;
 }
 .client .form fieldset span {
   margin: 0 0 1rem 0;

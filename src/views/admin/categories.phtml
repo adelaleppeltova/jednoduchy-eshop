@@ -9,7 +9,6 @@
                 <th class="tg-0pky">url</th>
                 <th class="tg-0pky">Název</th>
                 <th class="tg-0pky">Popis</th>
-                <th class="tg-0pky">Homepage</th>
                 <th class="tg-0pky">Upravit</th>
                 <th class="tg-0pky">Odstranit</th>
 
@@ -21,9 +20,8 @@
                     <td class="tg-pcvp"><?= $category["url"] ?></td>
                     <td class="tg-pcvp"><?= $category["title"] ?></td>
                     <td class="tg-pcvp"><?= $category["descript"] ?></td>
-                    <td class="tg-pcvp"><?= $category["homepage"] ?></td>
                     <td class="tg-pcvp"><a href="/admin/categories/edit?id=<?= $category["id"] ?>"><i class="fa-solid fa-pencil edit-pencil"></i></a></td>
-                    <td class="tg-pcvp"><a href="#"><i class="fa-solid fa-trash delete-icon"></a></i></td>
+                    <td class="tg-pcvp"><a href="/admin/categories/delete?id=<?= $category["id"] ?>"><i class="fa-solid fa-trash delete-icon"></a></i></td>
                 </tr>
             <?php endforeach ?>
 

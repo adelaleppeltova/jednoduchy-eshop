@@ -5,7 +5,7 @@ class CategoryManager
     public static function getCategory(string $id): array
     {
         return Db::requestSingle('
-			SELECT `id`, `url`, `title`, `descript`, `homepage`
+			SELECT `id`, `url`, `title`, `descript`
 			FROM `categories` 
 			WHERE `id` = ?
 		', array($id));
@@ -24,7 +24,7 @@ class CategoryManager
     public static function getCategories(): array
     {
         return Db::requestAll('
-			SELECT `id`, `url`, `title`, `descript`, `homepage`
+			SELECT `id`, `url`, `title`, `descript`
 			FROM `categories` 
 			ORDER BY `id` DESC
 		');
